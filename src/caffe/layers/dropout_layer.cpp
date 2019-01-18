@@ -26,6 +26,7 @@ void DropoutLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
   // Set up the cache for random number generation
   // ReshapeLike does not work because rand_vec_ is of Dtype uint
   rand_vec_.Reshape(bottom[0]->shape());
+      bottom[0]->height(), bottom[0]->width());
 }
 
 template <typename Dtype>
