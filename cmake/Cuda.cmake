@@ -231,7 +231,7 @@ endfunction()
 ###  Non macro section
 ################################################################################################
 
-find_package(CUDA 5.5 QUIET)
+find_package(CUDA 5.5 QUIET PATHS /cm/shared/apps/cuda80/toolkit/8.0.61 NO_DEFAULT_PATH)
 find_cuda_helper_libs(curand)  # cmake 2.8.7 compartibility which doesn't search for curand
 
 if(NOT CUDA_FOUND)
